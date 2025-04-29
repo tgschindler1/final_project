@@ -44,20 +44,20 @@ self.analyzer = Analyzer(self.game)
 jackpot_count = self.analyzer.jackpot()
 ```
 Die Class:
-   Die, paramaters: faces
+      Die, paramaters: faces
    
-   A die has 'N' sides, or “faces”, and 'W' weights, and can be rolled
-   to select a face.
+      A die has 'N' sides, or “faces”, and 'W' weights, and can be rolled
+      to select a face.
    
-   Each side contains a unique symbol. Symbols may be all alphabetic or
-   all numeric.
+      Each side contains a unique symbol. Symbols may be all alphabetic or
+      all numeric.
    
-   Weight defaults to 1.0 for each face but can be changed after the
-   object is created.
+      Weight defaults to 1.0 for each face but can be changed after the
+      object is created.
    
-   The die has one behavior, which is to be rolled one or more times.
+      The die has one behavior, which is to be rolled one or more times.
    
-   Methods defined here:
+      Methods defined here:
    
    __init__, paramaters: faces
    
@@ -90,6 +90,7 @@ Die Class:
        Returns a Python list of outcomes.
   
    show
+   
        Returns a copy of the private die data frame.
 
 Game Class:
