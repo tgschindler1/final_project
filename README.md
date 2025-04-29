@@ -49,8 +49,8 @@ jackpot_count = self.analyzer.jackpot()
 ```
 # Class Descriptions
 
-class Die
-   Die(faces)
+**class Die**
+   **Die(faces)**
    
    -A die has 'N' sides, or “faces”, and 'W' weights, and can be rolled
    to select a face.
@@ -65,35 +65,35 @@ class Die
    
    Methods defined here:
    
-   __init__(self, faces)
-      -Takes a NumPy array of faces as an argument and throws a `TypeError` if
-       not a NumPy array.
-       
-      -Tests to see if the values are distinct and raises a `ValueError` if not.
-       
-      -Internally initializes the weights to 1.0 for each face.
-       
-      -Saves both faces and weights in a private data frame.
+   **__init__(self, faces)**
+   -Takes a NumPy array of faces as an argument and throws a `TypeError` if
+    not a NumPy array.
+    
+   -Tests to see if the values are distinct and raises a `ValueError` if not.
+    
+   -Internally initializes the weights to 1.0 for each face.
+    
+   -Saves both faces and weights in a private data frame.
    
-   change_weight(self, face, new_weight)
-       -Takes two arguments: the face value to be changed and the new
-       weight.
-       
-       -Checks to see if the face passed is valid value, i.e. if it is in
-       the die array. If not, raises an `IndexError`.
-       
-       -Checks to see if the weight is a valid type, i.e. if it is numeric
-       (integer or float) or castable as numeric. If not, raises a
-       `TypeError`.
+   **change_weight(self, face, new_weight)**
+    -Takes two arguments: the face value to be changed and the new
+    weight.
+    
+    -Checks to see if the face passed is valid value, i.e. if it is in
+    the die array. If not, raises an `IndexError`.
+    
+    -Checks to see if the weight is a valid type, i.e. if it is numeric
+    (integer or float) or castable as numeric. If not, raises a
+    `TypeError`.
    
-   roll(self, num_rolls=1)
-       -Takes a parameter of how many times the die is to be rolled;
-       defaults to 1.
-       
-       -Returns a Python list of outcomes.
+   **roll(self, num_rolls=1)**
+    -Takes a parameter of how many times the die is to be rolled;
+    defaults to 1.
+    
+    -Returns a Python list of outcomes.
    
-   show(self)
-       -Returns a copy of the private die data frame.
+   **show(self)**
+    -Returns a copy of the private die data frame.
 
 class Game(builtins.object)
  |  Game(dice)
