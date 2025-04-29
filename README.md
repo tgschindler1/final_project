@@ -62,7 +62,7 @@ jackpot_count = self.analyzer.jackpot()
    
    -The die has one behavior, which is to be rolled one or more times.
    
-   Methods defined here:
+   ### Methods defined here:
    
    **__init__(self, faces)**
    
@@ -108,7 +108,7 @@ jackpot_count = self.analyzer.jackpot()
    
    Game objects only keep the results of their most recent play.
    
-   Methods defined here:
+   ### Methods defined here:
    
    **__init__(self, dice)**
    
