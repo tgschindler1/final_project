@@ -16,10 +16,9 @@ a Game object.
 \[Die\] &rarr; \[Game\] &rarr; \[Analyzer\]
 
 Package can be installed from github and ran in Python3.
-https://github.com/tgschindler1/final_project/blob/main
 
 ```bash
-pip install montecarlo
+pip install https://github.com/tgschindler1/final_project
 ```
 
 ```python
