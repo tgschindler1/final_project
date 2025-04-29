@@ -60,6 +60,7 @@ Die Class:
    Methods defined here:
    
    __init__, paramaters: faces
+   
        Takes a NumPy array of faces as an argument and throws a `TypeError` if
        not a NumPy array.
        
@@ -70,6 +71,7 @@ Die Class:
        Saves both faces and weights in a private data frame.
    
    change_weight, paramaters: face, new_weight
+   
        Takes two arguments: the face value to be changed and the new
        weight.
        
@@ -81,6 +83,7 @@ Die Class:
        `TypeError`.
    
    roll, paramaters: num_rolls
+   
        Takes a parameter of how many times the die is to be rolled;
        defaults to 1.
        
