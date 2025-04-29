@@ -1,4 +1,4 @@
-# Final Project Report
+ # Final Project Report
 
 * Class: DS 5100
 * Student Name: Thomas Schindler
@@ -100,80 +100,81 @@ jackpot_count = self.analyzer.jackpot()
 
 ## class Game(dice)
    
-   A game consists of rolling of one or more similar dice (Die objects)
+   -A game consists of rolling of one or more similar dice (Die objects)
    one or more times.
    
-   Game objects have a behavior to play a game, i.e. to roll all of the
+   -Game objects have a behavior to play a game, i.e. to roll all of the
    dice a given number of times.
    
-   Game objects only keep the results of their most recent play.
+   -Game objects only keep the results of their most recent play.
    
    ### Methods defined here:
    
    **__init__(self, dice)**
    
- Each game is initialized with a Python list that contains one or
+ -Each game is initialized with a Python list that contains one or
  more dice.
    
    **play(self, rolls)**
    
- Takes an integer parameter to specify how many times the dice should
+ -Takes an integer parameter to specify how many times the dice should
  be rolled.
  
- Saves the result of the play to a private data frame.
+ -Saves the result of the play to a private data frame.
    
    **show(self, form='wide')**
    
- Returns a copy of the private play data frame
+ -Returns a copy of the private play data frame
  
- Takes a parameter to return the data frame in narrow or wide form
+ -Takes a parameter to return the data frame in narrow or wide form
  which defaults to wide form.
        
 ## class Analyzer(game)
    
-   An Analyzer object takes the results of a single game and computes
+   -An Analyzer object takes the results of a single game and computes
    various descriptive statistical properties about it.
    
    ### Methods defined here:
    
 **__init__(self, game)**
- Takes a game object as its input parameter. 
+
+ -Takes a game object as its input parameter. 
  
- Throws a `ValueError` if the passed value is not a Game object.
+ -Throws a `ValueError` if the passed value is not a Game object.
 
 **combo_counts(self)**
 
- Computes the distinct combinations of faces rolled, along with their
+ -Computes the distinct combinations of faces rolled, along with their
  counts.
  
- Combinations are order-independent and may contain repetitions.
+ -Combinations are order-independent and may contain repetitions.
  
- Returns a data frame of results.
+ -Returns a data frame of results.
 
 **face_counts_per_roll(self)**
 
- Computes how many times a given face is rolled in each event.
+ -Computes how many times a given face is rolled in each event.
  
- For example, if a roll of five dice has all sixes, then the
+ -For example, if a roll of five dice has all sixes, then the
  counts for this roll would be $5$ for the face value ‘6’ and $0$
  for the other faces.
  
- Returns a data frame of results.
+ -Returns a data frame of results.
 
 **jackpot(self)**
 
- A jackpot is a result in which all faces are the same, e.g. all ones
+ -A jackpot is a result in which all faces are the same, e.g. all ones
  for a six-sided die.
  
- Computes how many times the game resulted in a jackpot.
+ -Computes how many times the game resulted in a jackpot.
  
- Returns an integer for the number of jackpots.
+ -Returns an integer for the number of jackpots.
 
 **permutation_counts(self)**
 
- Computes the distinct permutations of faces rolled, along with their
+ -Computes the distinct permutations of faces rolled, along with their
  counts.
  
- Permutations are order-independent and may contain repetitions.
+ -Permutations are order-independent and may contain repetitions.
  
- Returns a data frame of results.
+ -Returns a data frame of results.
