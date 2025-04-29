@@ -16,13 +16,14 @@ a Game object.
 \[Die\] &rarr; \[Game\] &rarr; \[Analyzer\]
 
 Package can be installed from github and ran in Python3.
+https://github.com/tgschindler1/final_project/blob/main
 
 ```bash
-pip install https://github.com/tgschindler1/final_project/blob/main
+pip install montecarlo
 ```
 
 ```python
-from montecaro import Die, Game, Analyzer
+from montecaro.montecarlo import Die, Game, Analyzer
 
 self.faces = np.array([1, 2, 3, 4, 5, 6])
 self.die_one = Die(self.faces)
