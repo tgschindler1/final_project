@@ -17,10 +17,11 @@ a Game object.
 
 # Installation
 
-Package can be installed from github and ran in Python3.
+To install package, clone this repo https://github.com/tgschindler1/final_project.
+cd into repo and run following compand.
 
 ```bash
-pip install https://github.com/tgschindler1/final_project
+pip install .
 ```
 
 # Sample Usage
