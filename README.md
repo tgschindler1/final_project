@@ -98,34 +98,36 @@ jackpot_count = self.analyzer.jackpot()
    
   -Returns a copy of the private die data frame.
 
-class Game(builtins.object)
- |  Game(dice)
- |  
- |  A game consists of rolling of one or more similar dice (Die objects)
- |  one or more times.
- |  
- |  Game objects have a behavior to play a game, i.e. to roll all of the
- |  dice a given number of times.
- |  
- |  Game objects only keep the results of their most recent play.
- |  
- |  Methods defined here:
- |  
- |  __init__(self, dice)
- |      Each game is initialized with a Python list that contains one or
- |      more dice.
- |  
- |  play(self, rolls)
- |      Takes an integer parameter to specify how many times the dice should
- |      be rolled.
- |      
- |      Saves the result of the play to a private data frame.
- |  
- |  show(self, form='wide')
- |      Returns a copy of the private play data frame
- |      
- |      Takes a parameter to return the data frame in narrow or wide form
- |      which defaults to wide form.
+## class Game(dice)
+   
+   A game consists of rolling of one or more similar dice (Die objects)
+   one or more times.
+   
+   Game objects have a behavior to play a game, i.e. to roll all of the
+   dice a given number of times.
+   
+   Game objects only keep the results of their most recent play.
+   
+   Methods defined here:
+   
+   **__init__(self, dice)**
+   
+ Each game is initialized with a Python list that contains one or
+ more dice.
+   
+   **play(self, rolls)**
+   
+ Takes an integer parameter to specify how many times the dice should
+ be rolled.
+ 
+ Saves the result of the play to a private data frame.
+   
+   **show(self, form='wide')**
+   
+ Returns a copy of the private play data frame
+ 
+ Takes a parameter to return the data frame in narrow or wide form
+ which defaults to wide form.
        
 class Analyzer(builtins.object)
  |  Analyzer(game)
