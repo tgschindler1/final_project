@@ -129,48 +129,51 @@ jackpot_count = self.analyzer.jackpot()
  Takes a parameter to return the data frame in narrow or wide form
  which defaults to wide form.
        
-class Analyzer(builtins.object)
- |  Analyzer(game)
- |  
- |  An Analyzer object takes the results of a single game and computes
- |  various descriptive statistical properties about it.
- |  
- |  Methods defined here:
- |  
- |  __init__(self, game)
- |      Takes a game object as its input parameter. 
- |      
- |      Throws a `ValueError` if the passed value is not a Game object.
- |  
- |  combo_counts(self)
- |      Computes the distinct combinations of faces rolled, along with their
- |      counts.
- |      
- |      Combinations are order-independent and may contain repetitions.
- |      
- |      Returns a data frame of results.
- |  
- |  face_counts_per_roll(self)
- |      Computes how many times a given face is rolled in each event.
- |      
- |      For example, if a roll of five dice has all sixes, then the
- |      counts for this roll would be $5$ for the face value ‘6’ and $0$
- |      for the other faces.
- |      
- |      Returns a data frame of results.
- |  
- |  jackpot(self)
- |      A jackpot is a result in which all faces are the same, e.g. all ones
- |      for a six-sided die.
- |      
- |      Computes how many times the game resulted in a jackpot.
- |      
- |      Returns an integer for the number of jackpots.
- |  
- |  permutation_counts(self)
- |      Computes the distinct permutations of faces rolled, along with their
- |      counts.
- |      
- |      Permutations are order-independent and may contain repetitions.
- |      
- |      Returns a data frame of results.
+## class Analyzer(game)
+   
+   An Analyzer object takes the results of a single game and computes
+   various descriptive statistical properties about it.
+   
+   ### Methods defined here:
+   
+**__init__(self, game)**
+ Takes a game object as its input parameter. 
+ 
+ Throws a `ValueError` if the passed value is not a Game object.
+
+**combo_counts(self)**
+
+ Computes the distinct combinations of faces rolled, along with their
+ counts.
+ 
+ Combinations are order-independent and may contain repetitions.
+ 
+ Returns a data frame of results.
+
+**face_counts_per_roll(self)**
+
+ Computes how many times a given face is rolled in each event.
+ 
+ For example, if a roll of five dice has all sixes, then the
+ counts for this roll would be $5$ for the face value ‘6’ and $0$
+ for the other faces.
+ 
+ Returns a data frame of results.
+
+**jackpot(self)**
+
+ A jackpot is a result in which all faces are the same, e.g. all ones
+ for a six-sided die.
+ 
+ Computes how many times the game resulted in a jackpot.
+ 
+ Returns an integer for the number of jackpots.
+
+**permutation_counts(self)**
+
+ Computes the distinct permutations of faces rolled, along with their
+ counts.
+ 
+ Permutations are order-independent and may contain repetitions.
+ 
+ Returns a data frame of results.
