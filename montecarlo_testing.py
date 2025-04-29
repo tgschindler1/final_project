@@ -33,13 +33,12 @@ class DieTestSuite(unittest.TestCase):
         self.assertTrue(isinstance(self.dice, list))
 
     def test_play(self):
-        faces = np.array([1, 2, 3, 4, 5, 6])
-        die = Die(faces)
         self.game.play(10)
         self.assertEqual(len(self.game.play_result), 10)
 
     def test_game_show(self):
-        self.assertTrue(isinstance(self.game.show(), pd.DataFrame))
+        game_copy = self.game.show()
+        self.assertTrue(isinstance(game_copy, pd.DataFrame))
 
     def test_analyzer_init(self):
         self.assertTrue(isinstance(self.game, Game))
