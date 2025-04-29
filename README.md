@@ -49,7 +49,7 @@ jackpot_count = self.analyzer.jackpot()
 ```
 # Class Descriptions
 
-**class Die(faces)**
+## class Die(faces)
    
    -A die has 'N' sides, or “faces”, and 'W' weights, and can be rolled
    to select a face.
