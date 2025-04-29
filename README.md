@@ -66,14 +66,14 @@ class Die
    Methods defined here:
    
    __init__(self, faces)
-       -Takes a NumPy array of faces as an argument and throws a `TypeError` if
+      -Takes a NumPy array of faces as an argument and throws a `TypeError` if
        not a NumPy array.
        
-       -Tests to see if the values are distinct and raises a `ValueError` if not.
+      -Tests to see if the values are distinct and raises a `ValueError` if not.
        
-       -Internally initializes the weights to 1.0 for each face.
+      -Internally initializes the weights to 1.0 for each face.
        
-       -Saves both faces and weights in a private data frame.
+      -Saves both faces and weights in a private data frame.
    
    change_weight(self, face, new_weight)
        -Takes two arguments: the face value to be changed and the new
