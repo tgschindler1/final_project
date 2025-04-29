@@ -65,6 +65,7 @@ jackpot_count = self.analyzer.jackpot()
    Methods defined here:
    
    **__init__(self, faces)**
+   
    -Takes a NumPy array of faces as an argument and throws a `TypeError` if
     not a NumPy array.
     
@@ -75,6 +76,7 @@ jackpot_count = self.analyzer.jackpot()
    -Saves both faces and weights in a private data frame.
    
    **change_weight(self, face, new_weight)**
+   
   -Takes two arguments: the face value to be changed and the new
   weight.
   
@@ -86,12 +88,14 @@ jackpot_count = self.analyzer.jackpot()
   `TypeError`.
    
    **roll(self, num_rolls=1)**
+   
   -Takes a parameter of how many times the die is to be rolled;
   defaults to 1.
   
   -Returns a Python list of outcomes.
    
    **show(self)**
+   
   -Returns a copy of the private die data frame.
 
 class Game(builtins.object)
