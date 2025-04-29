@@ -73,7 +73,6 @@ jackpot_count = self.analyzer.jackpot()
     
    -Internally initializes the weights to 1.0 for each face.
     
-   -Saves both faces and weights in a private data frame.
    
    **change_weight(self, face, new_weight)**
    
@@ -96,7 +95,7 @@ jackpot_count = self.analyzer.jackpot()
    
    **show(self)**
    
-  -Returns a copy of the private die data frame.
+  -Returns data frame of die with its faces and weights.
 
 ## class Game(dice)
    
@@ -119,12 +118,10 @@ jackpot_count = self.analyzer.jackpot()
    
  -Takes an integer parameter to specify how many times the dice should
  be rolled.
- 
- -Saves the result of the play to a private data frame.
    
    **show(self, form='wide')**
    
- -Returns a copy of the private play data frame
+ -Returns a data frame of the play result.
  
  -Takes a parameter to return the data frame in narrow or wide form
  which defaults to wide form.
