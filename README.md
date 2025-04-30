@@ -18,7 +18,7 @@ a Game object.
 # Installation
 
 To install package, clone this repo https://github.com/tgschindler1/final_project.
-cd into repo and run following compand.
+cd into repo and run following comand.
 
 ```bash
 pip install .
