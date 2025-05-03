@@ -31,7 +31,7 @@ class Die:
         if np.unique(faces).size != faces.size:
             raise ValueError("Faces must be unique.")
         
-        self.df = pd.DataFrame({'weight': 1.0}, index=faces)
+        self._df = pd.DataFrame({'weight': 1.0}, index=faces)
 
     def change_weight(self, face, new_weight):
         """
@@ -45,13 +45,13 @@ class Die:
         (integer or float) or castable as numeric. If not, raises a
         `TypeError`.
         """
-        if face not in self.df.index:
+        if face not in self._df.index:
             raise IndexError("Face not found in the die.")
         
         if not isinstance(new_weight, (int, float)):
             raise TypeError("Weight must be a numeric value.")
 
-        self.df.loc[face, 'weight'] = new_weight
+        self._df.loc[face, 'weight'] = new_weight
 
     def roll(self, num_rolls=1):
         """
@@ -60,7 +60,7 @@ class Die:
 
         Returns a Python list of outcomes.
         """
-        outcomes = self.df.sample(n=num_rolls, replace=True, weights='weight').index.tolist()
+        outcomes = self._df.sample(n=num_rolls, replace=True, weights='weight').index.tolist()
         return outcomes
     
 
@@ -68,7 +68,7 @@ class Die:
         """
         Returns a copy of the private die data frame.
         """
-        return self.df.copy()
+        return self._df.copy()
     
     
 class Game:
@@ -88,7 +88,7 @@ class Game:
 
         """
         self.dice = dice
-        self.play_result = None 
+        self._play_result = None 
         
 
     def play(self, rolls):
@@ -99,24 +99,23 @@ class Game:
         Saves the result of the play to a private data frame.
         """
         roll_result = {}
-        for die in self.dice:
-            index = self.dice.index(die)
+        for index, die in enumerate(self.dice):
             roll_result[index] = die.roll(rolls)
         
-        self.play_result = pd.DataFrame(roll_result)
+        self._play_result = pd.DataFrame(roll_result)
 
     def show(self, form='wide'):  
         """
-        This method returns a copy of the private play data frame
+        Returns a copy of the private play data frame
         
         Takes a parameter to return the data frame in narrow or wide form
         which defaults to wide form.
         """
         if form == 'wide':
-            return self.play_result.copy()
+            return self._play_result.copy()
         
         elif form == 'narrow':
-            return pd.DataFrame(self.play_result.stack()).copy()
+            return pd.DataFrame(self._play_result.stack()).copy()
         
         else:
             raise ValueError("Form must be 'wide' or 'narrow'.")
@@ -190,6 +189,6 @@ class Analyzer:
 
         Returns a data frame of results.
         """
-        permutations = self.play_result.apply(tuple).value_counts()
+        permutations = self.play_result.apply(tuple, axis=1).value_counts()
         permutation_counts = pd.DataFrame(permutations)
         return permutation_counts.copy()
