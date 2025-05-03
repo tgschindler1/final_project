@@ -30,23 +30,26 @@ Import package:
 ```python
 from montecaro.montecarlo import Die, Game, Analyzer
 ```
-Call Die class:
+## Use Die class:
 ```python
-self.faces = np.array([1, 2, 3, 4, 5, 6])
-self.die_one = Die(self.faces)
-self.die_two = Die(self.faces)
-self.die_three = Die(self.faces)
+faces = np.array([1, 2, 3, 4, 5, 6])
+die_one = Die(faces)
+die_two = Die(faces)
+die_three = Die(faces)
+die_one.change_weight(1, 5)
 ```
-Call Game class:
+
+## Use Game class:
 ```python
-self.dice = [self.die_one, self.die_two, self.die_three]
-self.game = Game(self.dice)
-self.game.play(100)
+dice = [die_one, die_two, die_three]
+game = Game(dice)
+game.play(100)
 ```
-Call Analyzer class:
+
+## Use Analyzer class:
 ```python
-self.analyzer = Analyzer(self.game)
-jackpot_count = self.analyzer.jackpot()
+analyzer = Analyzer(game)
+jackpot_count = analyzer.jackpot()
 ```
 # Class Descriptions
 
