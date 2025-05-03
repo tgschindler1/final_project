@@ -26,7 +26,7 @@ pip install .
 
 # Sample Usage
 
-Import package:
+## Import package:
 ```python
 from montecaro.montecarlo import Die, Game, Analyzer
 ```
